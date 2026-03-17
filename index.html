@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NG Investimentos | Nicolo Gomes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --brand-red: #E31C1C; --brand-dark: #0a0a0a; }
+        body { background-color: var(--brand-dark); color: white; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.08); }
+        .btn-primary { background-color: var(--brand-red); transition: all 0.3s ease; border: none; cursor: pointer; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(227, 28, 28, 0.4); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.7s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
+        input[type=range]::-webkit-slider-runnable-track { height: 4px; background: #333; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: var(--brand-red); margin-top: -8px; }
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+    </style>
+</head>
+<body>
+
+    <button onclick="wppGeral()" class="whatsapp-float"><i class="fab fa-whatsapp"></i></button>
+
+    <nav class="fixed w-full z-50 p-4 md:p-6 flex justify-between items-center glass">
+        <h1 class="text-xl md:text-2xl font-black tracking-tighter">NG <span class="text-red-600 italic text-lg md:text-2xl">INVESTIMENTOS</span></h1>
+        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+            <a href="#home" class="hover:text-white transition">Início</a>
+            <a href="#vantagens" class="hover:text-white transition">Vantagens</a>
+            <a href="#sobre" class="hover:text-white transition">O Consultor</a>
+            <a href="#simulador" class="hover:text-white transition">Simulador</a>
+        </div>
+        <button onclick="wppGeral()" class="btn-primary px-5 py-2 rounded font-bold text-[10px] md:text-xs">FALAR COM NICOLO</button>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center px-6 md:px-20 pt-32 md:pt-20 gap-10">
+        <div class="w-full md:w-1/2 flex justify-center reveal">
+            <img src="https://via.placeholder.com/500x600/1a1a1a/ffffff?text=FOTO+NICOLLO+1" class="rounded-2xl border border-white/10 max-w-[280px] md:max-w-sm shadow-2xl">
+        </div>
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <span class="text-red-600 font-bold tracking-[0.2em] uppercase text-xs">Estrategista Ademicon</span>
+            <h2 class="text-4xl md:text-7xl font-black mt-4 leading-tight">Realize seus sonhos <span class="text-red-600 italic">sem juros.</span></h2>
+            <div class="mt-8 flex justify-center md:justify-start">
+                <a href="#simulador" class="btn-primary px-8 py-4 rounded font-bold text-sm">SIMULAR AGORA</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 bg-zinc-950 flex flex-col md:flex-row justify-around items-center gap-8 reveal border-y border-white/5">
+        <div class="text-center"><h3 class="text-4xl md:text-5xl font-black text-red-600">+560k</h3><p class="text-gray-500 uppercase text-[10px] tracking-widest mt-2 font-bold">Clientes Ativos</p></div>
+        <div class="text-center"><h3 class="text-4xl md:text-5xl font-black text-red-600">Nº 1</h3><p class="text-gray-500 uppercase text-[10px] tracking-widest mt-2 font-bold">Maior do Brasil</p></div>
+        <div class="text-center"><h3 class="text-4xl md:text-5xl font-black text-red-600">Global</h3><p class="text-gray-500 uppercase text-[10px] tracking-widest mt-2 font-bold">Vendas Internacionais</p></div>
+    </section>
+
+    <section id="vantagens" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-12 reveal">
+            <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter italic">Consórcio vs Financiamento</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass p-8 rounded-2xl reveal">
+                <h4 class="text-gray-500 font-bold text-xl mb-4 italic">Bancos</h4>
+                <p class="text-gray-400 text-sm">Juros compostos que podem triplicar o valor final do seu bem. Aprovação burocrática e taxas abusivas.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl reveal border-red-600/30 bg-red-600/5">
+                <h4 class="text-red-600 font-bold text-xl mb-4 italic">NG Investimentos</h4>
+                <p class="text-white text-sm font-semibold italic">Zero Juros Bancários. Apenas taxa de administração fixa de 24% distribuída no prazo total. Poder de compra à vista.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 px-6 md:px-20 flex flex-col md:flex-row-reverse items-center gap-10">
+        <div class="w-full md:w-1/2 flex justify-center reveal">
+            <img src="https://via.placeholder.com/500x600/1a1a1a/ffffff?text=FOTO+NICOLLO+2" class="rounded-2xl border border-white/10 max-w-[280px] md:max-w-sm">
+        </div>
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase italic">Nicolo Gomes</h2>
+            <p class="text-gray-400 text-lg italic">Consultor de Elite Ademicon. Especialista em planejamento financeiro multinacional e construção de patrimônio inteligente.</p>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10 bg-zinc-950">
+        <div class="w-full md:w-1/2 flex justify-center reveal">
+            <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=FOTO+EQUIPE" class="rounded-2xl border border-white/10 shadow-2xl">
+        </div>
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase text-red-600 italic">Maior Equipe do Brasil</h2>
+            <p class="text-gray-400 text-lg leading-relaxed">Suporte de elite e a equipe que mais cresce no Pais. Atendimento personalizado para garantir a sua contemplação no menor tempo possível.</p>
+        </div>
+    </section>
+
+    <section id="simulador" class="py-24 px-6 bg-black">
+        <div class="max-w-xl mx-auto glass p-8 md:p-12 rounded-[2.5rem] reveal border-red-600/20">
+            <h3 class="text-xl font-black mb-10 text-center uppercase tracking-widest italic">Simulador Inteligente</h3>
+            <div class="space-y-12">
+                <div>
+                    <div class="flex justify-between mb-2 text-sm uppercase tracking-widest font-bold"><span>Crédito</span><span id="vDisp" class="text-red-600">R$ 200.000</span></div>
+                    <input type="range" id="cInput" min="50000" max="1000000" step="10000" value="200000">
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2 text-sm uppercase tracking-widest font-bold"><span>Prazo</span><span id="pDisp" class="text-red-600">160 meses</span></div>
+                    <input type="range" id="pInput" min="24" max="240" step="1" value="160">
+                </div>
+                <div class="text-center py-4 border-t border-white/5 mt-4">
+                    <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Taxa de Administração</span>
+                    <p class="text-white font-black text-lg">1,3% ao ano</p>
+                </div>
+            </div>
+            <div class="mt-8 p-6 bg-white/5 rounded-2xl text-center border border-white/10">
+                <span class="text-[10px] text-gray-500 uppercase font-black tracking-widest">Parcela Mensal Estimada</span>
+                <div id="res" class="text-4xl md:text-5xl font-black text-white my-4">R$ 1.550,00</div>
+                <button onclick="wppSimulacao()" class="btn-primary w-full py-4 rounded-xl font-black uppercase text-xs tracking-widest italic">Enviar Proposta para Nicolo</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-zinc-950">
+        <h2 class="text-center text-3xl font-black mb-12 uppercase italic">Avaliações dos Clientes</h2>
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="glass p-6 rounded-2xl reveal text-center md:text-left">
+                <div class="flex text-yellow-500 mb-2 justify-center md:justify-start"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="text-gray-400 text-sm mb-4 italic">"Contemplado antes do prazo previsto! Nicolo é sensacional."</p>
+                <div class="font-bold text-xs text-red-600">Ricardo M. - Curitiba</div>
+            </div>
+            <div class="glass p-6 rounded-2xl reveal text-center md:text-left">
+                <div class="flex text-yellow-500 mb-2 justify-center md:justify-start"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="text-gray-400 text-sm mb-4 italic">"Transparência total no atendimento internacional."</p>
+                <div class="font-bold text-xs text-red-600">Ana P. - Lisboa</div>
+            </div>
+            <div class="glass p-6 rounded-2xl reveal text-center md:text-left">
+                <div class="flex text-yellow-500 mb-2 justify-center md:justify-start"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="text-gray-400 text-sm mb-4 italic">"Fugi dos juros do banco graças à consultoria do Nicolo."</p>
+                <div class="font-bold text-xs text-red-600">Carla S. - SP</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-800 text-[10px] tracking-[0.4em] uppercase font-bold">NG Investimentos © 2026</footer>
+
+    <script>
+        const ci = document.getElementById('cInput'), pi = document.getElementById('pInput');
+        const cd = document.getElementById('vDisp'), pd = document.getElementById('pDisp'), res = document.getElementById('res');
+        const WPP_NUM = "554184226487";
+
+        function calc() {
+            let v = parseInt(ci.value), p = parseInt(pi.value);
+            let t = 0.24; // TAXA FIXA DE 24%
+            let parc = (v * (1 + t)) / p;
+            cd.innerText = v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            pd.innerText = p + " meses";
+            res.innerText = parc.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+        [ci, pi].forEach(i => i.oninput = calc);
+
+        function wppGeral() {
+            let m = `Olá Nicolo! Vi seu site e gostaria de uma consultoria especializada sobre consórcios. Pode me atender?`;
+            window.open(`https://wa.me/${WPP_NUM}?text=${encodeURIComponent(m)}`);
+        }
+
+        function wppSimulacao() {
+            let m = `Olá Nicolo! Fiz uma simulação no seu site: Crédito de ${cd.innerText} em ${pd.innerText}. A taxa de 24% me interessou, quero uma proposta oficial!`;
+            window.open(`https://wa.me/${WPP_NUM}?text=${encodeURIComponent(m)}`);
+        }
+
+        window.addEventListener('scroll', () => { document.querySelectorAll('.reveal').forEach(r => { if (r.getBoundingClientRect().top < window.innerHeight - 50) r.classList.add('active'); }); });
+        window.onload = () => { calc(); document.querySelectorAll('.reveal').forEach(r => r.classList.add('active')); };
+    </script>
+</body>
+</html>
